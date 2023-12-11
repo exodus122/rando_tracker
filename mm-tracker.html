@@ -1,0 +1,397 @@
+<!DOCTYPE>
+  <html>
+	<head>
+		<link rel="shortcut icon" href="./images/mm/Majora.png" /> 
+		<link style="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>MM Tracker</title>
+	</head>
+	<body oncontextmenu="return false;">
+	
+		<div id="row">
+			<div id="normalColumn1" class="column"></div>
+			<div id="normalColumn2" class="column"></div>	
+			<div id="normalColumn3" class="column"></div>
+			<div id="normalColumn4" class="column"></div>
+			<div id="normalColumn5" class="column"></div>
+			<div id="normalColumn6" class="column"></div>
+			<div id="normalColumn7" class="column"></div>
+			<div id="normalColumn8" class="column"></div>
+			<div id="songColumn" class="column">
+				<div id="songdiv"></div><br>
+				<textarea spellcheck="false" rows="12" cols="13" id="hintInput"></textarea><br><br>
+				<button id='resetCycleButton' onclick="resetCycle()">Reset Cycle</button><br>
+				<button id="simControl"onclick="document.getElementById('fileInput').click();" >Play the Sim</button> 
+				<input id="fileInput" type="file" onchange='onChooseFile(event, onFileLoad.bind(this, "contents"))' style="display:none;" /><br>
+				<button id='helpButton' onclick="document.getElementById('myModal').style.display = 'block';">Help</button><br><br>
+				<label class="settingsLabels" for="settings_option">Mode</label>
+				<select class="settingsOptions" id="settings_option">
+					<option value="S4">S4</option>
+					<option value="Scrubs">Scrubs</option>
+					<option value="Blitz">Blitz</option>
+					<option value="S3">S3</option>
+				</select><br><br class="half_break">
+				<label class="settingsLabels" for="gossips_option">Gossips</label>
+				<select class="settingsOptions" id="gossips_option">
+					<option value="OFF">Off</option>
+					<option value="ON">On</option>
+				</select><br>
+				<!--<label class="settingsLabels" for="small_keys_option">SMALL KEYS</label>
+				<select class="settingsOptions" id="small_keys_option">
+				  <option value="KEYSY">KEYSY</option>
+				  <option value="VANILLA">VANILLA</option>
+				</select><br><br class="half_break">-->
+			</div>
+			<div id="itemColumn" class="itemColumn2">
+				<small id="checks_remaining" class="check_text" style="color:lightblue">Remaining:</small>
+				<small id="checks_in_logic" class="check_text" style="color:chartreuse">In Logic:</small><br><br>
+				
+				<img src="./images/mm/items/Bow.png" id="Bow Upgrade_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Fire Arrow.png" id="Fire Arrow_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Ice Arrow.png" id="Ice Arrow_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Light Arrow.png" id="Light Arrow_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Magic.png" id="Magic Upgrade_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Hookshot.png" id="Hookshot_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Deku Mask.png" id="Deku Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Goron Mask.png" id="Goron Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Zora Mask.png" id="Zora Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<small class="track_text"> </small><small class="track_text"> </small>
+				<img src="./images/mm/items/Gibdo Mask.png" id="Gibdo Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<small class="track_text">/</small>
+				<img src="./images/mm/items/Garo's Mask.png" id="Garo's Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Sonata of Awakening.png" id="Sonata of Awakening_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Goron Lullaby.png" id="Goron Lullaby_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/New Wave Bossa Nova.png" id="New Wave Bossa Nova_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Elegy of Emptiness.png" id="Elegy of Emptiness_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Oath to Order.png" id="Oath to Order_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Epona's Song.png" id="Epona's Song_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Odolwa's Remains.png" id="Odolwa's Remains_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Goht's Remains.png" id="Goht's Remains_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Gyorg's Remains.png" id="Gyorg's Remains_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Twinmold's Remains.png" id="Twinmold's Remains_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br><br>
+				<img src="./images/mm/items/Powder Keg.png" id="Powder Keg_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Mirror Shield.png" id="Mirror Shield_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Bomb Bag.png" id="Bomb Bag Upgrade_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Pictograph Box.png" id="Pictograph Box_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Lens of Truth.png" id="Lens of Truth_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Adult's Wallet.png" id="Wallet Upgrade_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Room Key.png" id="Room Key_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Letter to Kafei.png" id="Letter to Kafei_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Letter to Mama.png" id="Letter to Mama_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Great Fairy's Sword.png" id="Great Fairy's Sword_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Song of Healing.png" id="Song of Healing_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Song of Storms.png" id="Song of Storms_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Moon's Tear.png" id="Moon's Tear_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Land Title Deed.png" id="Land Title Deed_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Swamp Title Deed.png" id="Swamp Title Deed_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Mountain Title Deed.png" id="Mountain Title Deed_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Ocean Title Deed.png" id="Ocean Title Deed_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Magic Bean.png" id="Magic Bean_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Empty Bottle.png" id="Bottle1_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Empty Bottle.png" id="Bottle2_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Empty Bottle.png" id="Bottle3_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Empty Bottle.png" id="Bottle4_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Empty Bottle.png" id="Bottle5_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Bottle of Gold Dust.png" id="Bottle of Gold Dust_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br><br>
+				<img src="./images/mm/items/Captain's Hat.png" id="Captain's Hat_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Postman's Hat.png" id="Postman's Hat_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/All-Night Mask.png" id="All-Night Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Blast Mask.png" id="Blast Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Keaton Mask.png" id="Keaton Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Bremen Mask.png" id="Bremen Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Bunny Hood.png" id="Bunny Hood_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Romani's Mask.png" id="Romani's Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Kafei's Mask.png" id="Kafei's Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Couple's Mask.png" id="Couple's Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Mask of Truth.png" id="Mask of Truth_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Kamaro's Mask.png" id="Kamaro's Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<br>
+				<img src="./images/mm/items/Mask of Scents.png" id="Mask of Scents_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Stone Mask.png" id="Stone Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Giant's Mask.png" id="Giant's Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Fierce Deity's Mask.png" id="Fierce Deity's Mask_img" class="requirements" onmousedown="click_item(this)"></img>
+				
+				<img src="./images/mm/items/Ocarina of Time.png" id="Ocarina of Time_img" class="requirements_hidden" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Kokiri Sword.png" id="sword1_img" class="requirements_hidden" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Pendant of Memories.png" id="Pendant of Memories_img" class="requirements_hidden" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Great Fairy's Mask.png" id="Great Fairy's Mask_img" class="requirements_hidden" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Don Gero's Mask.png" id="Don Gero's Mask_img" class="requirements_hidden" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Circus Leader's Mask.png" id="Circus Leader's Mask_img" class="requirements_hidden" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Song of Time.png" id="song_of_time_img" class="requirements_hidden" onmousedown="click_item(this)"></img>
+				<img src="./images/mm/items/Song of Soaring.png" id="song_of_soaring_img" class="requirements_hidden" onmousedown="click_item(this)"></img><br><br>
+				
+				<div style="font-size: 0px;">
+					<small class="hint_text" id="barren_text">Foolish</small><br>
+					<input spellcheck="false" id="barren_input1" class="hint_input"></input>
+					<input spellcheck="false" id="barren_input2" class="hint_input"></input>
+					<input spellcheck="false" id="barren_input3" class="hint_input"></input>
+					<input spellcheck="false" id="barren_input4" class="hint_input"></input><br>
+					
+					<small class="hint_text" id="woth_text" >WOTH</small><br>
+					<input spellcheck="false" id="woth_input1" class="hint_input"></input>
+					<input spellcheck="false" id="woth_input2" class="hint_input"></input>
+					<input spellcheck="false" id="woth_input3" class="hint_input"></input>
+					<input spellcheck="false" id="woth_input4" class="hint_input"></input>
+					<input spellcheck="false" id="woth_input5" class="hint_input"></input><br>
+				</div>
+				
+				<div id="woth_info">
+					<small id="woth1_title" class="woth_info_title" onmousedown="resetWoth(1)"></small><br>
+					<small id="woth1_text1" class="woth_info_text"></small>
+					<small id="woth1_text2" class="woth_info_text"></small>
+					<small id="woth1_text3" class="woth_info_text"></small>
+					<small id="woth1_text4" class="woth_info_text"></small>
+					<small id="woth1_text5" class="woth_info_text"></small>
+					<small id="woth1_text6" class="woth_info_text"></small>
+					<small id="woth1_text7" class="woth_info_text"></small>
+					<small id="woth1_text8" class="woth_info_text"></small>
+					<small id="woth1_text9" class="woth_info_text"></small>
+					<small id="woth1_text10" class="woth_info_text"></small>
+					<small id="woth1_text11" class="woth_info_text"></small>
+					<small id="woth1_text12" class="woth_info_text"></small>
+					<small id="woth1_text13" class="woth_info_text"></small>
+					<small id="woth1_text14" class="woth_info_text"></small>
+					<small id="woth1_text15" class="woth_info_text"></small>
+					
+					<small id="woth2_title" class="woth_info_title" onmousedown="resetWoth(2)"></small><br>
+					<small id="woth2_text1" class="woth_info_text"></small>
+					<small id="woth2_text2" class="woth_info_text"></small>
+					<small id="woth2_text3" class="woth_info_text"></small>
+					<small id="woth2_text4" class="woth_info_text"></small>
+					<small id="woth2_text5" class="woth_info_text"></small>
+					<small id="woth2_text6" class="woth_info_text"></small>
+					<small id="woth2_text7" class="woth_info_text"></small>
+					<small id="woth2_text8" class="woth_info_text"></small>
+					<small id="woth2_text9" class="woth_info_text"></small>
+					<small id="woth2_text10" class="woth_info_text"></small>
+					<small id="woth2_text11" class="woth_info_text"></small>
+					<small id="woth2_text12" class="woth_info_text"></small>
+					<small id="woth2_text13" class="woth_info_text"></small>
+					<small id="woth2_text14" class="woth_info_text"></small>
+					<small id="woth2_text15" class="woth_info_text"></small>
+					
+					<small id="woth3_title" class="woth_info_title" onmousedown="resetWoth(3)"></small><br>
+					<small id="woth3_text1" class="woth_info_text"></small>
+					<small id="woth3_text2" class="woth_info_text"></small>
+					<small id="woth3_text3" class="woth_info_text"></small>
+					<small id="woth3_text4" class="woth_info_text"></small>
+					<small id="woth3_text5" class="woth_info_text"></small>
+					<small id="woth3_text6" class="woth_info_text"></small>
+					<small id="woth3_text7" class="woth_info_text"></small>
+					<small id="woth3_text8" class="woth_info_text"></small>
+					<small id="woth3_text9" class="woth_info_text"></small>
+					<small id="woth3_text10" class="woth_info_text"></small>
+					<small id="woth3_text11" class="woth_info_text"></small>
+					<small id="woth3_text12" class="woth_info_text"></small>
+					<small id="woth3_text13" class="woth_info_text"></small>
+					<small id="woth3_text14" class="woth_info_text"></small>
+					<small id="woth3_text15" class="woth_info_text"></small>
+					
+					<small id="woth4_title" class="woth_info_title" onmousedown="resetWoth(4)"></small><br>
+					<small id="woth4_text1" class="woth_info_text"></small>
+					<small id="woth4_text2" class="woth_info_text"></small>
+					<small id="woth4_text3" class="woth_info_text"></small>
+					<small id="woth4_text4" class="woth_info_text"></small>
+					<small id="woth4_text5" class="woth_info_text"></small>
+					<small id="woth4_text6" class="woth_info_text"></small>
+					<small id="woth4_text7" class="woth_info_text"></small>
+					<small id="woth4_text8" class="woth_info_text"></small>
+					<small id="woth4_text9" class="woth_info_text"></small>
+					<small id="woth4_text10" class="woth_info_text"></small>
+					<small id="woth4_text11" class="woth_info_text"></small>
+					<small id="woth4_text12" class="woth_info_text"></small>
+					<small id="woth4_text13" class="woth_info_text"></small>
+					<small id="woth4_text14" class="woth_info_text"></small>
+					<small id="woth4_text15" class="woth_info_text"></small>
+					
+					<small id="woth5_title" class="woth_info_title" onmousedown="resetWoth(5)"></small><br>
+					<small id="woth5_text1" class="woth_info_text"></small>
+					<small id="woth5_text2" class="woth_info_text"></small>
+					<small id="woth5_text3" class="woth_info_text"></small>
+					<small id="woth5_text4" class="woth_info_text"></small>
+					<small id="woth5_text5" class="woth_info_text"></small>
+					<small id="woth5_text6" class="woth_info_text"></small>
+					<small id="woth5_text7" class="woth_info_text"></small>
+					<small id="woth5_text8" class="woth_info_text"></small>
+					<small id="woth5_text9" class="woth_info_text"></small>
+					<small id="woth5_text10" class="woth_info_text"></small>
+					<small id="woth5_text11" class="woth_info_text"></small>
+					<small id="woth5_text12" class="woth_info_text"></small>
+					<small id="woth5_text13" class="woth_info_text"></small>
+					<small id="woth5_text14" class="woth_info_text"></small>
+					<small id="woth5_text15" class="woth_info_text"></small>
+				</div>
+			</div>
+		</div>
+		<div id="checkSummaryColumn1" class="checkSummaryColumn"></div>
+		<div id="checkSummaryColumn2" class="checkSummaryColumn"></div>
+		<div id="checkSummaryColumn3" class="checkSummaryColumn"></div>
+		<img src="./images/mm/evansong.png" class="evansong"></img><br><br>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>This tracker is based on <a href="https://soilflux.github.io/tracker">soli's OoT tracker.</a><br><br>
+				-Input the code for an item/song in the picture text box next to a check. You can also left click on the text to mark it as junk.<br> 
+				-Capitalize the third letter of the code to "peek" it, or capitalize the first letter of the code to "hint" it. Peeked or hinted checks will not be counted as obtained until you click the check text.<br>
+				-Input abbreviations for hint areas in the Foolish and WOTH boxes to track those.<br>
+				-An alternate way of inputting always/sometimes hints is by putting a location code and the three letter item code (or x for nothing) into the text area on their own line.<br>
+				-Press Ctrl+Z to undo the last item input.<br>
+				-Click the "Reset Cycle" button to unmark items you lose when you play Song of Time.<br><br>
+				Simulator:<br>
+				-To start the simulator click the "Play the Sim" button and select a spoiler log (only Blitz tested).<br>
+				-Left click a check to get it. Right click a check to peek it. You can then left or right click the peeked check again to obtain it.<br>
+				-If you peek a check which is not freestanding, it will tell you that you found an unknown gilded chest, labeled by "???". You can left click the check again to obtain the item there.<br>
+				-Click a Gossip Stone check (colored pink) to get a hint.<br></p>
+				<div class="modal_column">Item codes:<br>
+				x - Junk<br>
+				bow - Bow<br>
+				fir - Fire Arrow<br>
+				ice - Ice Arrow<br>
+				lig - Light Arrow<br>
+				bom - Bomb Bag<br>
+				bea - Magic Bean<br>
+				pow - Powder Keg<br>
+				pic - Pictograph Box<br>
+				len - Lens of Truth<br>
+				hoo - Hookshot<br>
+				gfs - Great Fairy Sword<br>
+				swo - Sword Upgrade<br>
+				mir - Mirror Shield<br>
+				mag - Magic Upgrade<br>
+				wal - Wallet Upgrade<br>
+				roo - Room Key<br>
+				spe - Special Delivery to Mama<br>
+				let - Letter to Kafei<br>
+				<!--pen - Pendant of Memories<br>-->
+				bot - Bottle<br>
+				gol - Gold Dust<br>
+				moo - Moon's Tear<br>
+				lan - Land Title Deed<br>
+				swa - Swamp Title Deed<br>
+				mou - Mountain Title Deed<br>
+				oce - Ocean Title Deed<br>
+				pos - Postman's hat<br>
+				all - All-Night Mask<br>
+				bla - Blast Mask<br>
+				sto - Stone Mask<br>
+				<!--gre - Great Fairy Mask<br>-->
+				dek - Deku Mask<br>
+				kea - Keaton Mask<br>
+				bre - Bremen Mask<br>
+				bun - Bunny Hood<br>
+				<!--don - Don Gero's Mask<br>-->
+				sce - Mask of Scents<br>
+				gor - Goron Mask<br>
+				rom - Romani Mask<br>
+				<!--cir - Circus Leader's Mask<br>-->
+				kaf - Kafei Mask<br>
+				cou - Couple's Mask<br>
+				tru - Mask of Truth<br>
+				zor - Zora Mask<br>
+				kam - Kamaro Mask<br>
+				gib - Gibdo Mask<br>
+				gar - Garo Mask<br>
+				cap - Captain's Hat<br>
+				gia - Giant's Mask<br>
+				fie - Fierce Deity Mask<br>
+				soh - Song of Healing<br>
+				epo - Epona's Song<br>
+				sos - Song of Storms<br>
+				son - Sonata of Awakening<br>
+				lul - Goron Lullaby<br>
+				nov - New Wave Bossa Nova<br>
+				ele - Elegy of Emptiness<br>
+				oat - Oath to Order<br><br></div>
+				<div class="modal_column">Location codes:<br>
+				swa - Swamp Spider House Reward<br>
+				oce - Ocean Spider House Day 1 Reward<br>
+				ali - Aliens Defense<br>
+				cre - Cremia<br>
+				but - Butler<br>
+				boa - Boat Archery<br>
+				dam - Dampe Digging<br>
+				rac - Goron Race<br>
+				fis - Fisherman Game<br>
+				ban - Bank Reward #3<br>
+				bea - Beaver Race #1<br>
+				gos - Gossip Stones<br>
+				sea - Seahorses<br>
+				sm2 - Mountain Smithy Day 2<br>
+				mid - Midnight Meeting<br>
+				pos - Postman's Freedom Reward<br>
+				ka1 - Kafei<br>
+				ka2 - Curiosity Shop Man #1<br>
+				ka3 - Curiosity Shop Man #2<br>
+				poe - Poe Hut<br>
+				hun - Hungry Goron<br>
+				lef - Well Left Path Chest<br>
+				pam - Pamela's Father<br>
+				gor - Gorman<br>
+				gro - Grog<br>
+				dog - Dog Race<br>
+				iro - Iron Knuckle Chest<br>
+				tar - Town Archery #1<br>
+				sar - Swamp Archery #1<br>
+				bom - Bombers' Hide and Seek<br>
+				hon - Honey and Darling Any Day<br>
+				pla - Deku Playground Any Day<br>
+				bro - Gorman Bros Race<br>
+				dar - Woodfall Dark Room<br>
+				lig - Light Arrow Chest<br>
+				ice - Ice Arrow Chest<br>
+				fir - Fire Arrow Chest<br>
+				hoo - Hookshot Chest<br><br></div>
+				<div class="modal_column">Area codes:<br>
+				clo - Clock Tower Roof<br>
+				sct - South Clock Town<br>
+				nct - North Clock Town<br>
+				wct - West Clock Town<br>
+				lau - Laundry Pool<br>
+				ect - East Clock Town<br>
+				inn - Stock Pot Inn<br>
+				fie - Termina Field<br>
+				rsw - Road to Southern Swamp<br>
+				swa - Southern Swamp<br>
+				pal - Deku Palace<br>
+				woo - Woodfall<br>
+				mil - Milk Road<br>
+				ran - Romani Ranch<br>
+				mou - Mountain Village<br>
+				twi - Twin Islands<br>
+				gor - Goron Village<br>
+				psn - Path to Snowhead<br>
+				gre - Great Bay Coast<br>
+				cap - Zora Cape<br>
+				hal - Zora Hall<br>
+				ext - Pirates' Fortress Exterior<br>
+				sew - Pirates' Fortress Sewer<br>
+				int - Pirates' Fortress Interior<br>
+				pin - Pinnacle Rock<br>
+				rik - Road to Ikana<br>
+				gra - Ikana Graveyard<br>
+				can - Ikana Canyon<br>
+				shr - Secret Shrine<br>
+				wel - Beneath the Well<br>
+				cas - Ikana Castle<br>
+				sto - Stone Tower<br>
+				wft - Woodfall Temple<br>
+				sht - Snowhead Temple<br>
+				gbt - Great Bay Temple<br>
+				stt - Stone Tower Temple<br></div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="./js/mm_data.js"></script>
+	<script type="text/javascript" src="./js/tracker-main.js"></script>
+	<script type="text/javascript" src="./js/mm.js"></script>
+	
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE>
+ <html>
+	<head>
+		<link rel="shortcut icon" href="./images/tww/items/Wind Waker.png" /> 
+		<link style="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>WW Tracker</title>
+	</head>
+	<body oncontextmenu="return false;">
+		<div id="row">
+			<div id="map_column">
+				<div id="map_span"></div>
+			</div>
+			<div id="normalColumn1" class="column"></div>
+			<div id="normalColumn2" class="column"></div>
+			<div id="normalColumn3" class="column"></div>
+			<div id="dungeonColumn" class="column" style="display:none"></div>
+			<div id="dungeonColumn1" class="dungeonColumn"></div>
+			<div id="itemColumn" class="itemColumn2">
+				<small id="checks_remaining" class="check_text">Remaining:</small>
+				<small id="checks_in_logic" class="check_text">In Logic:</small><br>
+				
+				<div id="item_span" style="font-size:0px;">
+					<!--<img src="./images/tww/items/Telescope.png" id="Telescope_img" class="requirementsMidHave"></img>
+					<img src="./images/tww/items/Swift Sail.png" id="Swift Sail_img" class="requirementsMidHave"></img>
+					<img src="./images/tww/items/Wind Waker.png" id="Wind Waker_img" class="requirementsMidHave"></img>-->
+					<img src="./images/tww/items/Grappling Hook.png" id="Grappling Hook_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Boomerang.png" id="Boomerang_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Deku Leaf.png" id="Deku Leaf_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Magic Meter.png" id="Progressive Magic Meter_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Picto Box.png" id="Progressive Picto Box_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Iron Boots.png" id="Iron Boots_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					
+					<img src="./images/tww/items/Bait Bag.png" id="Bait Bag_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Heros Bow.png" id="Progressive Bow_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Bombs.png" id="Bombs_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/1 Empty Bottle.png" id="Empty Bottle_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Hookshot.png" id="Hookshot_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Skull Hammer.png" id="Skull Hammer_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<br>
+					
+					<img src="./images/tww/items/Ghost Ship Chart.png" id="Ghost Ship Chart_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Delivery Bag.png" id="Delivery Bag_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Note to Mom.png" id="Note to Mom_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Cabana Deed.png" id="Cabana Deed_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Maggie's Letter.png" id="Maggie's Letter_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Moblin's Letter.png" id="Moblin's Letter_img" class="requirementsMid" onmousedown="click_item(this)"></img><br>
+					
+					<img src="./images/tww/items/Heros Sword.png" id="Progressive Sword_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Heros Shield.png" id="Progressive Shield_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Power Bracelets.png" id="Power Bracelets_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Command Melody.png" id="Command Melody_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Wallet (1000 Rupees).png" id="Progressive Wallet_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/1 Tingle Statue.png" id="Progressive Tingle Statue_img" class="requirementsMid" onmousedown="click_item(this)"></img><br>
+					
+					<!--<img src="./images/tww/items/Hurricane Spin.png" id="Hurricane Spin_img" class="requirementsMid" onmousedown="highlight(this)"></img>-->
+					<!--<img src="./images/tww/items/Tingle Tuner.png" id="Tingle Tuner_img" class="requirementsMid" onmousedown="highlight(this)"></img>-->
+					
+					<!--<img src="./images/tww/items/Magic Armor.png" id="Magic Armor_img" class="requirementsMid" onmousedown="highlight(this)"></img>-->
+					<!--<img src="./images/tww/items/Spoils Bag.png" id="Spoils Bag_img" class="requirementsMid" onmousedown="highlight(this)"></img>-->
+					
+					<!--<img src="./images/tww/items/Winds Requiem.png" id="Winds Requiem_img" class="requirementsMidHave"></img>
+					<img src="./images/tww/items/Ballad of Gales.png" id="Ballad of Gales_img" class="requirementsMidHave"></img>-->
+					<!--<img src="./images/tww/items/Earth God's Lyric.png" id="Earth God's Lyric_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Wind God's Aria.png" id="Wind God's Aria_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Song of Passing.png" id="Song of Passing_img" class="requirementsMidHave"></img>-->
+					<br>
+					
+					<img src="./images/tww/items/Triforce Shards0.png" id="Triforce Shards_img" class="triforceImage" onmousedown="clickTriforce()"></img>
+					<!--<img src="./images/tww/pearl_holder.png" id="Triforce Shards_img" class="triforceImage"></img>-->
+					
+					<img src="./images/tww/items/Din's Pearl.png" id="Din's Pearl_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Farore's Pearl.png" id="Farore's Pearl_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+					<img src="./images/tww/items/Nayru's Pearl.png" id="Nayru's Pearl_img" class="requirementsMid" onmousedown="click_item(this)"></img>
+				</div>
+				<div style="font-size:0px;">
+					<div id="ff_span">
+						<small id="text_ff" class="dung_lightblue">FF </small>
+						<img src="./images/tww/items/Skull Hammer.png" id="ff_req1" class="requirements">
+						<small class="track_text">+</small>
+						<img src="./images/tww/items/Master Sword.png" id="ff_req2" class="requirements">
+						<small class="track_text">/</small>
+						<img src="./images/tww/items/Deku Leaf.png" id="ff_req3" class="requirements">
+						<img src="./images/tww/items/Magic Meter.png" id="ff_req4" class="requirements">
+						<small class="track_text">/</small>
+						<img src="./images/tww/items/Hookshot.png" id="ff_req5" class="requirements"><br>
+					</div>
+					<div id="drc_span">
+						<small id="text_drc" class="dung_red">DRC </small>
+						<img src="./images/tww/items/Grappling Hook.png" id="drc_req1" class="requirements">
+						<small class="track_text">(</small>
+						<img src="./images/tww/items/Heros Bow.png" id="drc_req2" class="requirements">
+						<small class="track_text">)</small><br>
+					</div>
+					<div id="fw_span">
+						<small id="text_fw" class="dung_green">FW </small>
+						<img src="./images/tww/items/Deku Leaf.png" id="fw_req1" class="requirements">
+						<img src="./images/tww/items/Magic Meter.png" id="fw_req2" class="requirements">
+						<small class="track_text">+</small>
+						<img src="./images/tww/items/Boomerang.png" id="fw_req3" class="requirements">
+						<small class="track_text">/</small>
+						<img src="./images/tww/items/Heros Bow.png" id="fw_req4" class="requirements">
+						<small class="track_text">/</small>
+						<img src="./images/tww/items/Bombs.png" id="fw_req5" class="requirements"><br>
+					</div>
+					<div id="tog_span">
+						<small id="text_tog" class="dung_blue">TOG </small>
+						<img src="./images/tww/items/Din's Pearl.png" id="tog_req1" class="requirements">
+						<img src="./images/tww/items/Farore's Pearl.png" id="tog_req2" class="requirements">
+						<img src="./images/tww/items/Nayru's Pearl.png" id="tog_req3" class="requirements">
+						<img src="./images/tww/items/Bombs.png" id="tog_req4" class="requirements">
+						<img src="./images/tww/items/Heros Bow.png" id="tog_req5" class="requirements">
+						<br>
+						<small class="track_text">(</small>
+						<img src="./images/tww/items/Deku Leaf.png" id="tog_req6" class="requirements">
+						<img src="./images/tww/items/Magic Meter.png" id="tog_req7" class="requirements">
+						<small class="track_text">/</small>
+						<img src="./images/tww/items/Grappling Hook.png" id="tog_req8" class="requirements">
+						<small class="track_text">)</small><br>
+					</div>
+					<div id="et_span">
+						<small id="text_et" class="dung_orange">EAR </small>
+						<img src="./images/tww/items/Power Bracelets.png" id="et_req1" class="requirements">
+						<img src="./images/tww/items/Command Melody.png" id="et_req2" class="requirements">
+						<img src="./images/tww/items/Mirror Shield.png" id="et_req3" class="requirements">
+						<img src="./images/tww/items/Skull Hammer.png" id="et_req4" class="requirements"><br>
+						
+						<img src="./images/tww/items/Power Bracelets.png" id="et_req5" class="requirements">
+						<img src="./images/tww/items/Command Melody.png" id="et_req6" class="requirements">
+						<img src="./images/tww/items/Deku Leaf.png" id="et_req7" class="requirements">
+						<img src="./images/tww/items/Magic Meter.png" id="et_req8" class="requirements">
+						<small class="track_text">+</small>
+						<img src="./images/tww/items/Mirror Shield.png" id="et_req9" class="requirements">
+						<small class="track_text">/</small>
+						<img src="./images/tww/items/Heros Bow (All Arrows).png" id="et_req10" class="requirements">
+					</div>
+					<div id="wt_span">
+						<small id="text_wt" class="dung_white">WIN </small>
+						<img src="./images/tww/items/Iron Boots.png" id="wt_req1" class="requirements">
+						<img src="./images/tww/items/Skull Hammer.png" id="wt_req2" class="requirements">
+						<img src="./images/tww/items/Command Melody.png" id="wt_req3" class="requirements">
+						<img src="./images/tww/items/Deku Leaf.png" id="wt_req4" class="requirements">
+						<img src="./images/tww/items/Magic Meter.png" id="wt_req5" class="requirements">
+						<img src="./images/tww/items/Hookshot.png" id="wt_req6" class="requirements"><br>
+					</div>
+					<div id="ganon_span">
+						<small id="text_ganon" class="dung_gray">GAN </small>
+						<img src="./images/tww/items/Master Sword (Full Power).png" id="gan_req1" class="requirements">
+						<img src="./images/tww/items/Heros Bow (All Arrows).png" id="gan_req2" class="requirements">
+						<img src="./images/tww/items/Magic Meter.png" id="gan_req3" class="requirements">
+						<img src="./images/tww/items/Hookshot.png" id="gan_req4" class="requirements"><br>
+					</div>
+				</div>
+				<br>
+				<img class="dungeon_reward_pic" src="./images/tww/items/Triforce_Shard_2.png"></img>
+				<input spellcheck="false" id="required_dungeon_input" class="required_dungeon_3_input" value="ffdrfw"></input>
+				<small class="track_text2">ff, dr, fw, tg, et, wt</small><br>
+				
+				<label class="settingsLabels" for="settings_option" style="display: none;">Mode</label>
+				<select class="settingsOptions" id="settings_option" style="display: none;">
+					<option value="S5">S5</option>
+					<option value="Miniblins">Miniblins</option>
+				</select>
+				
+				<textarea spellcheck="false" rows="2" cols="25" id="textbox"></textarea><br>
+				<small class="hint_text" id="woth_text">Path</small><br>
+				<div id="path_hint_div" style="display: flex;text-align:center;">
+					<div>
+						<input spellcheck="false" id="woth_input1" class="hint_input"><br>
+						<text id="path_arrow1" class="path_arrow">&#8595;<br></text>
+						<input spellcheck="false" id="path_boss1" class="hint_input">
+					</div>
+					<div>
+						<input spellcheck="false" id="woth_input2" class="hint_input"><br>
+						<text id="path_arrow2" class="path_arrow">&#8595;<br></text>
+						<input spellcheck="false" id="path_boss2" class="hint_input">
+					</div>
+					<div>
+						<input spellcheck="false" id="woth_input3" class="hint_input"><br>
+						<text id="path_arrow3" class="path_arrow">&#8595;<br></text>
+						<input spellcheck="false" id="path_boss3" class="hint_input">
+					</div>
+					<div>
+						<input spellcheck="false" id="woth_input4" class="hint_input" style="display:none;"><br>
+						<text id="path_arrow4" class="path_arrow" style="display:none;">&#8595;<br></text>
+						<input spellcheck="false" id="path_boss4" class="hint_input" style="display:none;">
+					</div>
+					<div>
+						<input spellcheck="false" id="woth_input5" class="hint_input" style="display:none;"><br>
+						<text id="path_arrow5" class="path_arrow" style="display:none;">&#8595;<br></text>
+						<input spellcheck="false" id="path_boss5" class="hint_input" style="display:none;">
+					</div>
+				</div>
+				<div style="font-size:0px;">
+					<small class="hint_text" id="barren_text">Barren</small><br>
+					<input spellcheck="false" id="barren_input1" class="hint_input"></input>
+					<input spellcheck="false" id="barren_input2" class="hint_input"></input>
+					<input spellcheck="false" id="barren_input3" class="hint_input"></input>
+					<input spellcheck="false" id="barren_input4" class="hint_input"></input><br>
+					<small class="hint_text" id="item_hint_text">Item</small><br>
+					<input spellcheck="false" class="hint_input" id="item_hint_input2" value=""></input>
+					<input spellcheck="false" class="hint_input" id="item_hint_input1" value=""></input><br>
+				</div>
+				<div id="woth_info">
+					<small id="woth1_title" class="woth_info_title" onmousedown="resetWoth(1)"></small><br>
+					<small id="woth1_text1" class="woth_info_text"></small>
+					<small id="woth1_text2" class="woth_info_text"></small>
+					<small id="woth1_text3" class="woth_info_text"></small>
+					<small id="woth1_text4" class="woth_info_text"></small>
+					<small id="woth1_text5" class="woth_info_text"></small>
+					<small id="woth1_text6" class="woth_info_text"></small>
+					<small id="woth1_text7" class="woth_info_text"></small>
+					<small id="woth1_text8" class="woth_info_text"></small>
+					<small id="woth1_text9" class="woth_info_text"></small>
+					<small id="woth1_text10" class="woth_info_text"></small>
+					<small id="woth1_text11" class="woth_info_text"></small>
+					<small id="woth1_text12" class="woth_info_text"></small>
+					<small id="woth1_text13" class="woth_info_text"></small>
+					<small id="woth1_text14" class="woth_info_text"></small>
+					<small id="woth1_text15" class="woth_info_text"></small>
+					
+					<small id="woth2_title" class="woth_info_title" onmousedown="resetWoth(2)"></small><br>
+					<small id="woth2_text1" class="woth_info_text"></small>
+					<small id="woth2_text2" class="woth_info_text"></small>
+					<small id="woth2_text3" class="woth_info_text"></small>
+					<small id="woth2_text4" class="woth_info_text"></small>
+					<small id="woth2_text5" class="woth_info_text"></small>
+					<small id="woth2_text6" class="woth_info_text"></small>
+					<small id="woth2_text7" class="woth_info_text"></small>
+					<small id="woth2_text8" class="woth_info_text"></small>
+					<small id="woth2_text9" class="woth_info_text"></small>
+					<small id="woth2_text10" class="woth_info_text"></small>
+					<small id="woth2_text11" class="woth_info_text"></small>
+					<small id="woth2_text12" class="woth_info_text"></small>
+					<small id="woth2_text13" class="woth_info_text"></small>
+					<small id="woth2_text14" class="woth_info_text"></small>
+					<small id="woth2_text15" class="woth_info_text"></small>
+					
+					<small id="woth3_title" class="woth_info_title" onmousedown="resetWoth(3)"></small><br>
+					<small id="woth3_text1" class="woth_info_text"></small>
+					<small id="woth3_text2" class="woth_info_text"></small>
+					<small id="woth3_text3" class="woth_info_text"></small>
+					<small id="woth3_text4" class="woth_info_text"></small>
+					<small id="woth3_text5" class="woth_info_text"></small>
+					<small id="woth3_text6" class="woth_info_text"></small>
+					<small id="woth3_text7" class="woth_info_text"></small>
+					<small id="woth3_text8" class="woth_info_text"></small>
+					<small id="woth3_text9" class="woth_info_text"></small>
+					<small id="woth3_text10" class="woth_info_text"></small>
+					<small id="woth3_text11" class="woth_info_text"></small>
+					<small id="woth3_text12" class="woth_info_text"></small>
+					<small id="woth3_text13" class="woth_info_text"></small>
+					<small id="woth3_text14" class="woth_info_text"></small>
+					<small id="woth3_text15" class="woth_info_text"></small>
+					
+					<small id="woth4_title" class="woth_info_title" onmousedown="resetWoth(4)"></small><!--<br>-->
+					<small id="woth4_text1" class="woth_info_text"></small>
+					<small id="woth4_text2" class="woth_info_text"></small>
+					<small id="woth4_text3" class="woth_info_text"></small>
+					<small id="woth4_text4" class="woth_info_text"></small>
+					<small id="woth4_text5" class="woth_info_text"></small>
+					<small id="woth4_text6" class="woth_info_text"></small>
+					<small id="woth4_text7" class="woth_info_text"></small>
+					<small id="woth4_text8" class="woth_info_text"></small>
+					<small id="woth4_text9" class="woth_info_text"></small>
+					<small id="woth4_text10" class="woth_info_text"></small>
+					<small id="woth4_text11" class="woth_info_text"></small>
+					<small id="woth4_text12" class="woth_info_text"></small>
+					<small id="woth4_text13" class="woth_info_text"></small>
+					<small id="woth4_text14" class="woth_info_text"></small>
+					<small id="woth4_text15" class="woth_info_text"></small>
+					
+					<small id="woth5_title" class="woth_info_title" onmousedown="resetWoth(5)"></small><!--<br>-->
+					<small id="woth5_text1" class="woth_info_text"></small>
+					<small id="woth5_text2" class="woth_info_text"></small>
+					<small id="woth5_text3" class="woth_info_text"></small>
+					<small id="woth5_text4" class="woth_info_text"></small>
+					<small id="woth5_text5" class="woth_info_text"></small>
+					<small id="woth5_text6" class="woth_info_text"></small>
+					<small id="woth5_text7" class="woth_info_text"></small>
+					<small id="woth5_text8" class="woth_info_text"></small>
+					<small id="woth5_text9" class="woth_info_text"></small>
+					<small id="woth5_text10" class="woth_info_text"></small>
+					<small id="woth5_text11" class="woth_info_text"></small>
+					<small id="woth5_text12" class="woth_info_text"></small>
+					<small id="woth5_text13" class="woth_info_text"></small>
+					<small id="woth5_text14" class="woth_info_text"></small>
+					<small id="woth5_text15" class="woth_info_text"></small>
+					
+					<small id="item_hint_title1" class="woth_info_title"></small>
+					<small id="item_hint_text1" class="woth_info_text"></small>
+				</div>
+			</div>
+			<div class="checkSummaryGroup">
+				<div id="checkSummaryColumn1" class="checkSummaryColumn"></div>
+				
+				<!--<input id="choosemusicfile" type="file">-->
+				<audio controls id="myAudio" style="height: 45px;"<!--autoplay loop-->></audio><br>
+				<small id="audio_title" class="track_text2"></small><br>
+				<button id="180bpm" onmousedown="$audio.attr('src', './sound/180 BPM - 10 frames.mp3'); document.getElementById('audio_title').innerHTML = '180 - Cliff Cave';">180 - Cliff Cave</button><br>
+				<button id="200bpm"onmousedown="$audio.attr('src', './sound/200 BPM - 9 frames.mp3'); document.getElementById('audio_title').innerHTML = '200 - DSE / DRI / ET1 / DRC Boss / Greatfish';" style="text-align:left; padding-left:6px;">200 - DSE / DRI / ET1 / DRC Boss / Greatfish</button><br>
+				<button id="225bpm" onmousedown="$audio.attr('src', './sound/225 BPM - 8 frames.mp3'); document.getElementById('audio_title').innerHTML = '225 - Most Chest / FF / Helmaroc / FW3 / DRC Forw';" style="text-align:left; padding-left:6px;">225 - Most Chest / FF / Helmaroc / FW3 / DRC Forw</button><br>
+				<button id="257bpm" onmousedown="$audio.attr('src', './sound/257 BPM - 7 frames.mp3'); document.getElementById('audio_title').innerHTML = '257 - Special Chest / FW2 / ET2 / Cabana / MnC Back / Dia-Islet';" style="text-align:left; padding-left:6px;" title="special chests are: FF PG, FW BKS, ET floormaster, WT right spike (unless void)">257 - Special Chest / FW2 / ET2 / Cabana / MnC Back / Dia-Islet</button><br>
+				<button id="300bpm" onmousedown="$audio.attr('src', './sound/300 BPM - 6 frames.mp3'); document.getElementById('audio_title').innerHTML = '300 - Sail Pump / Cliff Upper / FW1 / DRC reverse';" style="text-align:left; padding-left:6px;">300 - Sail Pump / Cliff Upper / FW1 / DRC reverse</button><br>
+				<button id="360bpm" onmousedown="$audio.attr('src', './sound/360 BPM - 5 frames.mp3'); document.getElementById('audio_title').innerHTML = '360 - MnC Front';">360 - MnC Front</button>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/tww_data.js"></script>
+		<script type="text/javascript" src="./js/tracker-main.js"></script>
+		<script type="text/javascript" src="./js/tww.js"></script>
+	</body>
+</html>

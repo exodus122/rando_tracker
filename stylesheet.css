@@ -1,0 +1,860 @@
+html {
+overflow: scroll;
+ overflow-x: hidden;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-color: #576166;
+color:black;
+font-family:sans-sarif;
+}
+::-webkit-scrollbar {
+	width: 0px;  /* Remove scrollbar space */
+	background: transparent;  /* Optional: just make scrollbar invisible */
+}
+body {
+margin: 0;
+overflow: hidden;
+}
+#normalColumn1 {
+	margin-left:10px;
+}
+
+#checks_remaining {
+	color:lightblue;
+	font-size: 17px;
+	font-weight: bold;
+}
+#checks_in_logic{
+	color:chartreuse;
+	font-size: 18px;
+	font-weight: bold;
+}
+#poes_collected{
+	color:white;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.empty {
+	height:0px;
+	width:0px;
+}
+.key_images {
+	height:22px;
+	width: 22px;
+	margin-left:0px;
+	margin-right:0px;
+	vertical-align:middle;
+}
+.key_div {
+	display: flex;
+	text-align:center;
+}
+.requirements {
+	height:30px;
+	width: 30px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 0.2;
+}
+.requirementsMid {
+	height:37px;
+	width: 37px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 0.2;
+}
+.requirementsMidHave {
+	height:37px;
+	width: 37px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 1;
+}
+.requirementsLarge {
+	height:45px;
+	width: 45px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 0.2;
+}
+.requirementsLargeHave {
+	height:45px;
+	width: 45px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 1;
+}
+#item_span2 {
+	position: absolute;
+	top: 370px;
+	left: 1200px;
+}
+#item_span {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.requirementsExtraLarge {
+	height:75px;
+	width: 75px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 0.2;
+}
+.triforceImage {
+	height:80px;
+	width: 80px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+}
+.requirements_hidden {
+	height:30px;
+	width: 30px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 0.2;
+	display: none;
+}
+.track_text {
+	font-size:30px;
+	margin-left:3px;
+	margin-right:3px;
+	vertical-align:top;
+}
+.track_text2 {
+	font-size:18px;
+	margin-left:3px;
+	margin-right:3px;
+	vertical-align:top;
+	color:silver;
+}
+.area_titles {
+	font-size: 20px;
+	font-weight: 3000;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.column {
+  margin-top:0px;
+  float: left;
+  width: 115px;
+}
+.column:after {
+    content: '\200b';
+}
+.dungeonColumn {
+  margin-top:0px;
+  float: left;
+  width: 115px;
+}
+.dungeonColumn:after {
+    content: '\200b';
+}
+.itemColumn {
+	margin-top:0px;
+	margin-left:10px;
+  float: left;
+  width: 245px;
+  font-size:0px;
+}
+.itemColumn2 {
+	margin-top:0px;
+	margin-left:10px;
+  float: left;
+  width: 245px;
+}
+.checkSummaryGroup {
+	position:relative;
+	float: left;
+	width: 254px;
+	padding-left: 10px;
+}
+.audio_span {
+	
+	position:relative;
+	float: left;
+	width: 250px;
+}
+.checkSummaryColumn {
+	position:relative;
+	float: left;
+	width: 253px;
+	margin-top:5px;
+}
+.checked_text_summary {
+	font-size: 14px;
+	font-weight: bold;	
+	letter-spacing: 0px;
+	color: chartreuse;
+	opacity: 1;
+}
+.checked_text_summary_not_have {
+	font-size: 14px;
+	font-weight: bold;	
+	letter-spacing: 0px;
+	color: chartreuse;
+	opacity: .5;
+}
+.checked_text_summary_have_ool {
+	font-size: 14px;
+	font-weight: normal;	
+	letter-spacing: 0px;
+	color: orange;
+	opacity: 1;
+}
+.checked_text_summary_could_have {
+	font-size: 14px;
+	font-weight: normal;	
+	letter-spacing: 0px;
+	color: orange;
+	opacity: 0.5;
+}
+.checked_text_summary_ool {
+	font-size: 14px;
+	font-weight: normal;	
+	letter-spacing: 0px;
+	color: black;
+	opacity: 1;
+}
+.checked_text_summary_known {
+	font-size: 14px;
+	font-weight: normal;	
+	letter-spacing: 0px;
+	color: white;
+	opacity: 1;
+}
+.checkSummaryText {
+	font-size: 14px;
+	font-weight: normal;	
+	letter-spacing: 0px;
+	color: black;
+	opacity: 1;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.picture_input {
+	width: 30px;
+	height:22px;
+	margin-bottom:2px;
+	margin-right:2px;
+	vertical-align: top;
+	padding-left: 0px;
+	border: none;
+	display:inline-block;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: magenta;
+}
+.other_input {
+	width: 30px;
+	height:22px;
+	margin-bottom:2px;
+	margin-right:2px;
+	vertical-align: top;
+	padding-left: 0px;
+	display:inline-block;
+	background-color:#404040;
+	color: white;
+}
+.area_name {
+	font-size:20px;
+	color: black;
+}
+.check_text {
+	font-size: 16px; 
+	letter-spacing: 0px;
+}
+.logic_check_text{
+	font-size: 16px;
+	color: chartreuse;
+	font-weight:bold;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:1px;
+	vertical-align: top;
+	letter-spacing: -1px;
+	
+}
+.known_check_text{
+	font-size: 16px;
+	color: chartreuse;
+	font-weight:normal;
+	display: inline-block;
+	opacity: .5;
+	margin-top:2px;
+	margin-bottom:1px;
+	vertical-align: top;
+	letter-spacing: -1px;
+}
+.access_check_text{
+	vertical-align: top;
+	font-size: 16px;
+	color: yellow;
+	font-weight:normal;
+	margin-top:2px;
+	margin-bottom:1px;
+	display: inline-block;
+	opacity: 0.7;
+	letter-spacing: -1px;
+}
+.peek_check_text{
+	vertical-align: top;
+	font-size: 16px;
+	color: orange;
+	font-weight:normal;
+	margin-top:2px;
+	margin-bottom:1px;
+	display: inline-block;
+	opacity: 1;
+	letter-spacing: -1px;
+}
+.could_peek_check_text{
+	vertical-align: top;
+	font-size: 16px;
+	color: orange;
+	font-weight:normal;
+	margin-top:2px;
+	margin-bottom:1px;
+	display: inline-block;
+	opacity: 0.3;
+	letter-spacing: -1px;
+}
+.could_access_check_text{
+	vertical-align: top;
+	font-size: 16px;
+	color: yellow;
+	font-weight:normal;
+	margin-top:2px;
+	margin-bottom:1px;
+	display: inline-block;
+	opacity: .3;
+	letter-spacing: -1px;
+}
+.ool_check_text{
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: normal;
+	color: 	black;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:1px;
+	opacity: .5;
+	letter-spacing: -1px;
+}
+.gossip_text {
+	font-size: 16px;
+	color: pink;
+	font-weight:bold;
+	display: inline-block;
+	opacity: 1;
+	margin-top:2px;
+	margin-bottom:1px;
+	vertical-align: top;
+	letter-spacing: -1px;
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#song_title {
+	color: white;
+}
+.songpics {
+	height:35px;
+	width: 35px;
+	margin-left:3px;
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	opacity: .2;
+}
+button{
+	margin-bottom: 5px;
+	outline:none;
+	background-color:#404040;
+	color: white;
+}
+#title_green {
+color:#88FA4E;
+}
+#title_white {
+color:#FFFFFF;
+}
+#title_blue {
+color:rgb(54, 130, 250);
+}
+#title_gold {
+color:rgb(155,161,0);
+}
+#title_orange {
+color: rgb(255, 165, 0);
+}
+#title_lightblue {
+color:lightblue;
+}
+#title_silver {
+color:silver;
+}
+#title_red {
+color:ff4d4d;
+}
+.simLog {
+	overflow-y: scroll;
+	background-color:#404040;
+	color: white;
+	display:none;
+}
+.hint_input {
+	width: 46px;
+	vertical-align: top;
+	margin-bottom: 0px;
+	background-color:#404040;
+	color: white;
+	display: inline;
+}
+.path_arrow {
+	color:#FFFFFF;
+	font-size:16px;
+}
+#hintInput {
+	background-color:#404040;
+	color: white;
+	resize: none;
+}
+#item_hint_text {
+	color: chartreuse;
+}
+#woth_text {
+	color: #33cccc;
+}
+#barren_text {
+	color: #ff8080;
+}
+#textbox {
+	background-color:#404040;
+	color: white;
+}
+.hint_text {
+	font-size: 20px;
+	font-weight: bold;
+}
+#songcolumn {
+	float: left;
+	width: 130px;
+	margin-right:2px;
+}
+.settingsOptions {
+	background-color:#404040;
+	color: white;
+}
+.settingsLabels{
+	color: white;
+}
+.half_break {
+	line-height: 50%;
+}
+#woth_info {
+	width: 220px;
+	margin-top:0px;
+	padding-top: 0px;
+	text-align:top;
+	overflow-y: auto;
+	height: 340px;
+}
+.woth_info_title {
+	font-size: 16px;
+}
+.wothMajorImages {
+	height: 22px;
+	width: 22px;
+	vertical-align: middle;
+}
+.woth_item_arrow {
+	width: 30px;
+	height:22px;
+	margin-bottom:2px;
+	margin-right:2px;
+	vertical-align: top;
+	padding: 0;
+	border: none;
+	color: black;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.wothImages {
+	margin-bottom:0px;
+	height: 22px;
+	width: 22px;
+	vertical-align: middle;
+}
+.manualWothImages {
+	margin-bottom:0px;
+	height: 22px;
+	width: 22px;
+	-webkit-filter: drop-shadow(0px 0px 5px yellow);
+	vertical-align: middle;
+}
+.notWothItemImages {
+	margin-bottom:0px;
+	height: 22px;
+	width: 22px;
+	filter: drop-shadow(0px 0px 5px red);
+	vertical-align: middle;
+}
+.putInLogicByWothItemImages {
+	margin-bottom:0px;
+	height: 22px;
+	width: 22px;
+	border: 1px solid red;
+	vertical-align: middle;
+}
+.modal_column {
+	display: inline-block;
+	margin-right: 100px;
+	vertical-align: top;
+}
+.evansong {
+	position: absolute;
+	left: 815px;
+	top: 640px;
+	width: 250px;
+}
+.required_dungeon_3_input {
+	height:22px;
+	width: 54px;
+	vertical-align: top;
+	margin-bottom: 2px;
+	margin-right:2px;
+	padding: 0;
+	padding-left: 3px;
+	background-color:#404040;
+	color: white;
+	font-family: Consolas,monaco,monospace; 
+}
+.required_dungeon_4_input {
+	height:22px;
+	width: 69px;
+	vertical-align: top;
+	margin-bottom: 2px;
+	margin-right:2px;
+	padding: 0;
+	padding-left: 3px;
+	background-color:#404040;
+	color: white;
+	font-family: Consolas,monaco,monospace; 
+}
+.item_hint {
+	height:22px;
+	width: 100px;
+	vertical-align: top;
+	margin-bottom: 2px;
+	margin-right:2px;
+	padding: 0;
+	padding-left: 3px;
+	background-color:#404040;
+	color: white;
+	font-family: Consolas,monaco,monospace; 
+}
+.mark_spawn {
+	height:22px;
+	width: 60px;
+	vertical-align: top;
+	margin-bottom: 2px;
+	margin-right:2px;
+	padding: 0;
+	padding-left: 3px;
+	background-color:#404040;
+	color: white;
+	font-family: Consolas,monaco,monospace; 
+}
+.dungeon_reward_pic {
+	height:25px;
+	width:25px;
+	margin-bottom: 6px;
+	margin-top: 0px;
+	margin-right: 2px;
+}
+#text_gan {
+	vertical-align:top;
+	color: #990000;
+	font-size:30px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+}
+.dung_lightgreen{
+	vertical-align:top;
+	color: lightgreen;
+	font-size:26px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_green{
+	vertical-align:top;
+	color:#88FA4E;
+	font-size:26px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_red{
+	vertical-align:top;
+	color: ff4d4d;
+	font-size:26px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_red{
+	vertical-align:top;
+	color: ff4d4d;
+	font-size:26px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_darkred{
+	vertical-align:top;
+	color: 990000;
+	font-size:26px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_lightblue{
+	vertical-align:top;
+	color: lightblue;
+	font-size:26px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_blue{
+	vertical-align:top;
+	color:rgb(54, 130, 250);
+	font-size:26px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_pink{
+	vertical-align:top;
+	font-size:26px;
+	color: rgb(238, 130, 238);
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_orange{
+	vertical-align:top;
+	font-size:26px;
+	color: rgb(255, 165, 0);
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_white{
+	vertical-align:top;
+	font-size:26px;
+	color: white;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_gray{
+	vertical-align:top;
+	font-size:26px;
+	color: darkgray;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.dung_silver{
+	vertical-align:top;
+	font-size:26px;
+	color: silver;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.superdot {
+  height: 18px;
+  width: 18px;
+  margin-left:2px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  vertical-align: center;
+  text-align: center;
+  font-size:16px;
+  color:lightgray;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+.superdotSK {
+  height: 18px;
+  width: 18px;
+  margin-left:2px;
+  vertical-align: center;
+  text-align: center;
+  font-size:16px;
+  color:black;
+  background-color: #b8b6b6;
+  border-radius: 50%;
+  display: inline-block;
+}
+.superdotBK {
+  height: 18px;
+  width: 18px;
+  margin-left:3px;
+  vertical-align: center;
+  text-align: center;
+  font-size:16px;
+  color:white;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+#map_column {
+	padding-left: 240px;
+  float: left;
+  position: relative;
+}
+#map_span {
+  width: 1070px;
+  height: 1070px;
+  float: left;
+  position: relative;
+  text-align: center;
+  
+	padding-left: 0px;
+	padding-top: 2px;
+}
+.map_img {
+	height: 100%;
+	width: 100%;
+}
+.map_label {
+	font-size: 18px;
+	float: left;
+	font-weight: 3000;
+	font-family: Calibri;
+	text-shadow:
+		2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+.game_pic {
+	width: 250px;
+}
+.pic_div {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.game_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+}
