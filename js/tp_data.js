@@ -915,7 +915,7 @@ var Data = {
 	"areas": [
 		{
 			"name": "Ordon Province",
-			"display_name": "Ordon",
+			"display_name": "Ordon Prov",
 			"area_image": "ordon_village",
 			"inputs": ["ord"],
 			"locations": [
@@ -1073,7 +1073,7 @@ var Data = {
 		},
 		{
 			"name": "Faron Field",
-			"area_image": "faron_field",
+			"area_image": "faron_field7",
 			"display_name": "Faron Field",
 			"inputs": ["ffi", "faf"],
 			"locations": [
@@ -1205,7 +1205,7 @@ var Data = {
 		{
 			"name": "Kakariko Gorge",
 			"display_name": "Kak Gorge",
-			"area_image": "kak_gorge",
+			"area_image": "kak_gorge4",
 			"inputs": ["kag", "kgo"],
 			"locations": [
 				{
@@ -1284,7 +1284,7 @@ var Data = {
 		{
 			"name": "Kakariko Village",
 			"display_name": "Kakariko",
-			"area_image": "kak",
+			"area_image": "kak7",
 			"inputs": ["kak"],
 			"locations": [
 				{
@@ -1746,6 +1746,7 @@ var Data = {
 		{
 			"name": "Lake Lantern Cave",
 			"display_name": "Lake Cave",
+			"area_image": "lake_cave",
 			"inputs": ["llc", "lca", "lac"],
 			"locations": [
 				{
@@ -1978,6 +1979,7 @@ var Data = {
 		{
 			"name": "Lanayru Spring",
 			"display_name": "Lan Spring",
+			"area_image": "lanayru_spring4",
 			"inputs": ["spr", "ls"],
 			"locations": [
 				{
@@ -2038,6 +2040,7 @@ var Data = {
 		{
 			"name": "Gerudo Desert",
 			"display_name": "Desert",
+			"area_image": "desert",
 			"inputs": ["des", "ger", "gd"],
 			"locations": [
 				{
@@ -2161,6 +2164,7 @@ var Data = {
 		{
 			"name": "Zoras Domain",
 			"display_name": "Zora Domain",
+			"area_image": "zora_domain",
 			"inputs": ["zd", "dom"],
 			"locations": [
 				{
@@ -2216,6 +2220,7 @@ var Data = {
 		{
 			"name": "Upper Zora's River",
 			"display_name": "Zora River",
+			"area_image": "zora_river",
 			"inputs": ["uzr", "zr", "riv"],
 			"locations": [
 				{
@@ -2350,6 +2355,7 @@ var Data = {
 		{
 			"name": "Snowpeak Province",
 			"display_name": "Snowpeak",
+			"area_image": "snowpeak",
 			"inputs": ["spp", "sp"],
 			"locations": [
 				{
@@ -2393,6 +2399,7 @@ var Data = {
 		{
 			"name": "Bulbin Camp",
 			"display_name": "Bulbin Camp",
+			"area_image": "bulbin_camp2",
 			"inputs": ["bc", "bul", "cam"],
 			"locations": [
 				{

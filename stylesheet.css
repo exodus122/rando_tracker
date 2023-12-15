@@ -670,21 +670,9 @@ color:ff4d4d;
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
-.dung_red{
-	vertical-align:top;
-	color: ff4d4d;
-	font-size:26px;
-	text-transform:uppercase;
-	font-family: "Consolas", Courier, monospace;
-	text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-}
 .dung_darkred{
 	vertical-align:top;
-	color: 990000;
+	color: d60d02;
 	font-size:26px;
 	text-transform:uppercase;
 	font-family: "Consolas", Courier, monospace;
