@@ -11,16 +11,6 @@ var Dungeon_Items_Remaining = {
 	"Temple of Time": 13,
 	"City in The Sky": 23
 }
-var Dungeon_Requirements = [
-	["Boomerang", "Lantern", "Bomb Bag"], // Forest Temple
-	["Iron_Boots", "Bow"], // Goron Mines
-	["Zora_Armor", "Bomb Bag", "Iron_Boots", "Clawshot", "Wooden Sword", "Bow", "Boomerang"], // Lakebed Temple
-	["Auru's_Memo", "Lantern", "Clawshot", "Spinner", "Wooden Sword", "Bomb Bag", "Ball_and_Chain"], // Arbiters Grounds
-	["Coral Earring", "Snowpeak_Ruins_Ordon_Goat_Cheese", "Ball_and_Chain", "Bomb Bag"], // Snowpeak Ruins
-	["Master Sword", "Broken Dominion Rod", "Lantern"], // Temple of Time
-	["1 Sky Book Page", "2 Sky Book Pages", "3 Sky Book Pages", "Double Clawshot", "Ordon Sword", "Iron_Boots"], // City in The Sky
-	["Double Clawshot", "Boomerang", "Spinner", "Master Sword", "Hidden Skill"] // Ganon
-];
 var Dungeon_Names_Short = ["for", "min", "lak", "arb", "sno", "tot", "sky", "gan"];
 
 /* Create check location elements */
@@ -352,3 +342,77 @@ function update() {
 
 update();
 setInterval(update,250);
+
+/*
+Drehen Tournament Rules: https://docs.google.com/document/d/1YI600cZFKcGmq0N4aQKWjQ51Z2bSps0dhbyEsw0edXY/edit
+Checks and Hints List: https://docs.google.com/document/d/1TUf3yqjy399PdMMXc96EctkhR_uABbsRMpjmCkAb-hk/edit
+Dolhpin/Wii VC Setup: https://docs.google.com/document/d/1V9rEukk_wIpLDwVtu0a_ppM-cxOCnrMcw93zCrs2OjU/edit
+LJA and Tricks: https://docs.google.com/document/d/12VG5dCRft7DTuPdpBNiVZLoIC4nZdi42HER2IapdFvU/edit#heading=h.xa0cj0xrj9cf
+S1 Settings string: f3sQ1z2koP_yPAR6HFTBfTBfGZp_wT7lFLnK7-DGO6gKpGAuHa0VPvruSjn5r2tob-Jt1xBkHt5J58YKQ1oNiOPM9jWxuL2rwAQQPaanT3i81R-KQ03UBg7QRLh33HKo6_u
+Drehen check stats: https://docs.google.com/spreadsheets/d/1QM84je21Eb2jP4oriKVGWdI8mYzbhKQRasVGMW9egOU/edit#gid=955595068
+
+HINTS LIST:
+
+Always :
+Lanayru Ice Block Puzzle Cave Chest
+Iza Helping Hand
+Goron Springwater Rush
+Jovani 20 Poe Soul Reward
+
+Sometimes :
+Bulbin Camp, Outside AG Lantern Chest
+Castle Town, Charlo Donation Blessing
+Castle Town, STAR 2
+Death Mountain Alcove Chest
+Eldin Fields, Bomb Rock Chest
+Eldin Fields, Bomskit Grotto lantern Chest
+Faron Fields, Under Bridge Chest
+Gerudo Desert, Rock Grotto Lantern Chest
+Gerudo Desert, West Canyon Chest (West Peahat)
+Great Bridge of Hylia, Bridge Vines Chest
+Kakariko Gorge, Lantern Cave Lantern Chest
+Kakariko Graveyard, Gift From Ralis (Coral Earing)
+Kakariko Graveyard, Lantern Chest
+Kakariko Village, Talo Sharpshooting & Mart Hawkeye (double hint, not implemented)
+Kakariko Village, Watchtower Alcove Chest
+Lake Hylia, Auru Gift To Fyer
+Lake Hylia, Shell Blade Grotto Chest
+Lanayru Fields, Behind Gate underwater
+Lanayru Fields, Skulltula grotto
+Lanayru Spring, Back Room Lantern Chest
+North-East Hyrule Fields, Stockcave Lantern Chest
+Ordon Province, Herding Goats Reward
+Ordon Province, Links Basement Chest
+Ordon Province, Ranch Grotto Lantern Chest
+Ordon Province, Wrestling With Bo
+Outside South Castle town, Fountain Chest
+Outside South Castle town, Tightrope Chest
+Outside West Castle town, Spinner Track Chest
+Sacred Grove, Lost Woods Lantern Chest
+Sacred Grove, Past Owl Statue Chest
+Snowpeak Province, Cave Ice Lantern Chest
+Snowpeak Province, Freezard Grotto Chest
+Snowpeak Province, Snowboard Racing Prize
+Upper Zoras River, Hole Bottle
+Upper Zoras River, Plumm Fruit Balloon Minigame
+Zoras Domain, Underwater Goron
+
+Dungeons Sometimes : (Mix with Sometimes, only if the Dungeon is required)
+Forest Temple, West Tile Worm Chest Behind Stairs
+Forest Temple, Gale Boomerang
+Goron Mines, Outside Clawshot Chest
+Lakebed Temple, BigKey Room and Before (double hint, not implemented)
+Arbiters Grounds, North Turning Room Chest
+Arbiters Grounds, Death Sword Chest
+Snowpeak Ruins, Ball and Chain & After Darkhammer Chest (double hint, not implemented)
+Snowpeak Ruins, Chapel Chest
+Temple Of Time, Darknut Chest
+Temple Of Time, Big Key Chest Room (double hint, not implemented)
+City In The Sky, Aeralfos Chest
+City In The Sky, East Wing Ooccoo & Wind Room (double hint, not implemented)
+
+PoeSanity Sometimes :
+Snowpeak Province, Icy Summit Poe (Outside SPR)
+Death Mountain Trail Poe
+
+*/

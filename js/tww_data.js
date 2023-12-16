@@ -14,6 +14,57 @@ var Data = {
 			"excluded_checks": []
 		}
 	],
+	"dungeons": [
+		{
+			"name": "Forsaken Fortress",
+			"alt_name": "",
+			"short_name": "ff",
+			"num_items": 0,
+			"requirements": ["Skull Hammer", "Master Sword", "Deku Leaf", "Magic Meter", "Hookshot"]
+		},
+		{
+			"name": "Dragon Roost Cavern",
+			"alt_name": "DRC",
+			"short_name": "drc",
+			"num_items": 12-2,
+			"requirements": ["Grappling Hook", "Heros Bow"]
+		},
+		{
+			"name": "Forbidden Woods",
+			"alt_name": "FW",
+			"short_name": "fw",
+			"num_items": 14-1,
+			"requirements": ["Deku Leaf", "Magic Meter", "Boomerang", "Heros Bow", "Bombs"]
+		},
+		{
+			"name": "Tower of the Gods",
+			"alt_name": "TotG",
+			"short_name": "tog",
+			"num_items": 11-1,
+			"requirements": ["Din's Pearl", "Farore's Pearl", "Nayru's Pearl", "Bombs", "Heros Bow", "Deku Leaf", "Magic Meter", "Grappling Hook"]
+		},
+		{
+			"name": "Earth Temple",
+			"alt_name": "ET",
+			"short_name": "et",
+			"num_items": 12-1,
+			"requirements": ["Power Bracelets", "Command Melody", "Mirror Shield", "Skull Hammer", "Power Bracelets", "Command Melody", "Deku Leaf", "Magic Meter", "Mirror Shield", "Heros Bow (All Arrows)"]
+		},
+		{
+			"name": "Wind Temple",
+			"alt_name": "WT",
+			"short_name": "wt",
+			"num_items": 11-1,
+			"requirements": ["Iron Boots", "Skull Hammer", "Command Melody", "Deku Leaf", "Magic Meter", "Hookshot"]
+		},
+		{
+			"name": "Ganon",
+			"alt_name": "",
+			"short_name": "gan",
+			"num_items": 0,
+			"requirements": ["Master Sword (Full Power)", "Heros Bow (All Arrows)", "Magic Meter", "Hookshot"]
+		}
+	],
 	"items": [
 		{
 			"name": "Grappling Hook",

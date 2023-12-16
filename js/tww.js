@@ -170,15 +170,6 @@ var Dungeon_Items_Remaining = {
 	"Earth Temple": 12-1,
 	"Wind Temple": 11-1
 }
-var Dungeon_Requirements = [
-	["Skull Hammer", "Master Sword", "Deku Leaf", "Magic Meter", "Hookshot"], // FF
-	["Grappling Hook", "Heros Bow"], // DRC
-	["Deku Leaf", "Magic Meter", "Boomerang", "Heros Bow", "Bombs"], // FW
-	["Din's Pearl", "Farore's Pearl", "Nayru's Pearl", "Bombs", "Heros Bow", "Deku Leaf", "Magic Meter", "Grappling Hook"], // ToG
-	["Power Bracelets", "Command Melody", "Mirror Shield", "Skull Hammer", "Power Bracelets", "Command Melody", "Deku Leaf", "Magic Meter", "Mirror Shield", "Heros Bow (All Arrows)"], // ET
-	["Iron Boots", "Skull Hammer", "Command Melody", "Deku Leaf", "Magic Meter", "Hookshot"], // WT
-	["Master Sword (Full Power)", "Heros Bow (All Arrows)", "Magic Meter", "Hookshot"] // Ganon
-];
 var Dungeon_Names_Short = ["ff", "drc", "fw", "tog", "et", "wt", "gan"];
 
 /* Create check location elements */

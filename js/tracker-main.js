@@ -515,11 +515,11 @@ function update_item_display() {
 
 function highlight_dungeon_requirements() {
 	
-	for(let i = 0; i < Dungeon_Requirements.length; i++) {
-		for(let j = 0; j < Dungeon_Requirements[i].length; j++) {
+	for(let i = 0; i < Data["dungeons"].length; i++) {
+		for(let j = 0; j < Data["dungeons"][i]["requirements"].length; j++) {
 			let k = j+1;
 			
-			if(getItem(Dungeon_Requirements[i][j]).obtained) {
+			if(getItem(Data["dungeons"][i]["requirements"][j]).obtained) {
 				document.getElementById(Dungeon_Names_Short[i]+"_req"+k).style.opacity = 1;
 			}
 			else {
@@ -951,6 +951,11 @@ function woth_and_barren_processing() {
 						break;
 					
 					let loc = Area["locations"][j];
+					
+					let settings = Data.settings.find(t=>t.name === document.getElementById("settings_option").value);
+					
+					if(settings["always_hints"].includes(loc.name))
+						continue;
 					
 					document.getElementById("text_"+loc.name).style.border = "1px solid";
 					

@@ -4,8 +4,67 @@ var Data = {
 		{
 			"name": "Drehen",
 			"starting_items": [],
+			"always_hints": ["Lanayru Ice Block Puzzle Cave Chest", "Iza Helping Hand", "Goron Springwater Rush", "Jovani 20 Poe Soul Reward"],
 			"excluded_check_types": [],
 			"excluded_checks": []
+		}
+	],
+	"dungeons": [
+		{
+			"name": "Forest Temple",
+			"alt_name": "Forest_Temple",
+			"short_name": "for",
+			"num_items": 12,
+			"requirements": ["Boomerang", "Lantern", "Bomb Bag"]
+		},
+		{
+			"name": "Goron Mines",
+			"alt_name": "Goron_Mines",
+			"short_name": "min",
+			"num_items": 15,
+			"requirements": ["Iron_Boots", "Bow"]
+		},
+		{
+			"name": "Lakebed Temple",
+			"alt_name": "Lakebed_Temple",
+			"short_name": "lak",
+			"num_items": 23,
+			"requirements": ["Zora_Armor", "Bomb Bag", "Iron_Boots", "Clawshot", "Wooden Sword", "Bow", "Boomerang"]
+		},
+		{
+			"name": "Arbiters Grounds",
+			"alt_name": "Arbiters_Grounds",
+			"short_name": "arb",
+			"num_items": 14,
+			"requirements": ["Auru's_Memo", "Lantern", "Clawshot", "Spinner", "Wooden Sword", "Bomb Bag", "Ball_and_Chain"]
+		},
+		{
+			"name": "Snowpeak Ruins",
+			"alt_name": "Snowpeak_Ruins",
+			"short_name": "sno",
+			"num_items": 13,
+			"requirements": ["Coral Earring", "Snowpeak_Ruins_Ordon_Goat_Cheese", "Ball_and_Chain", "Bomb Bag"]
+		},
+		{
+			"name": "Temple of Time",
+			"alt_name": "Temple_of_Time",
+			"short_name": "tot",
+			"num_items": 13,
+			"requirements": ["Master Sword", "Broken Dominion Rod", "Lantern"]
+		},
+		{
+			"name": "City in The Sky",
+			"alt_name": "City_in_The_Sky",
+			"short_name": "sky",
+			"num_items": 23,
+			"requirements": ["1 Sky Book Page", "2 Sky Book Pages", "3 Sky Book Pages", "Double Clawshot", "Ordon Sword", "Iron_Boots"]
+		},
+		{
+			"name": "Ganon",
+			"alt_name": "",
+			"short_name": "gan",
+			"num_items": 0,
+			"requirements": ["Double Clawshot", "Boomerang", "Spinner", "Master Sword", "Hidden Skill"]
 		}
 	],
 	"items": [
