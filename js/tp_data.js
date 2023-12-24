@@ -1054,7 +1054,7 @@ var Data = {
 			"name": "Faron Woods",
 			"area_image": "faron_woods4",
 			"display_name": "Faron Woods",
-			"inputs": ["woo"],
+			"inputs": ["woo", "fwo"],
 			"locations": [
 				{
 					"name": "South Faron Cave Chest",
@@ -1203,7 +1203,7 @@ var Data = {
 			"name": "Sacred Grove & Lost Woods",
 			"area_image": "sacred_grove3",
 			"display_name": "Grove/LW",
-			"inputs": ["sac", "gro", "lw", "sglw"],
+			"inputs": ["sac", "gro", "sg", "lw", "sglw"],
 			"locations": [
 				{
 					"name": "Sacred Grove Female Snail",

@@ -22,7 +22,7 @@
 				<button id='resetCycleButton' onclick="resetCycle()">Reset Cycle</button><br>
 				<button id="simControl"onclick="document.getElementById('fileInput').click();" >Play the Sim</button> 
 				<input id="fileInput" type="file" onchange='onChooseFile(event, onFileLoad.bind(this, "contents"))' style="display:none;" /><br>
-				<button id='helpButton' onclick="document.getElementById('myModal').style.display = 'block';">Help</button><br><br>
+				<button id='helpButton' onclick="document.getElementById('help_div1').style.display = 'block';">Help</button><br><br>
 				<label class="settingsLabels" for="settings_option">Mode</label>
 				<select class="settingsOptions" id="settings_option">
 					<option value="S4">S4</option>
@@ -235,10 +235,10 @@
 		<div id="checkSummaryColumn2" class="checkSummaryColumn"></div>
 		<div id="checkSummaryColumn3" class="checkSummaryColumn"></div>
 		<img src="./images/mm/evansong.png" class="evansong"></img><br><br>
-		<div id="myModal" class="modal">
-			<div class="modal-content">
+		<div id="help_div1" class="help_div1">
+			<div class="help_div2">
 				<span class="close">&times;</span>
-				<p>This tracker is based on <a href="https://soilflux.github.io/tracker">soli's OoT tracker.</a><br><br>
+				<p>This tracker was inspired by <a href="https://soilflux.github.io/tracker">soli's OoT tracker</a>.<br><br>
 				-Input the code for an item/song in the picture text box next to a check. You can also left click on the text to mark it as junk.<br> 
 				-Capitalize the third letter of the code to "peek" it, or capitalize the first letter of the code to "hint" it. Peeked or hinted checks will not be counted as obtained until you click the check text.<br>
 				-Input abbreviations for hint areas in the Foolish and WOTH boxes to track those.<br>
@@ -250,7 +250,7 @@
 				-Left click a check to get it. Right click a check to peek it. You can then left or right click the peeked check again to obtain it.<br>
 				-If you peek a check which is not freestanding, it will tell you that you found an unknown gilded chest, labeled by "???". You can left click the check again to obtain the item there.<br>
 				-Click a Gossip Stone check (colored pink) to get a hint.<br></p>
-				<div class="modal_column">Item codes:<br>
+				<div class="help_div2_column">Item codes:<br>
 				x - Junk<br>
 				bow - Bow<br>
 				fir - Fire Arrow<br>
@@ -310,7 +310,7 @@
 				nov - New Wave Bossa Nova<br>
 				ele - Elegy of Emptiness<br>
 				oat - Oath to Order<br><br></div>
-				<div class="modal_column">Location codes:<br>
+				<div class="help_div2_column">Location codes:<br>
 				swa - Swamp Spider House Reward<br>
 				oce - Ocean Spider House Day 1 Reward<br>
 				ali - Aliens Defense<br>
@@ -349,7 +349,7 @@
 				ice - Ice Arrow Chest<br>
 				fir - Fire Arrow Chest<br>
 				hoo - Hookshot Chest<br><br></div>
-				<div class="modal_column">Area codes:<br>
+				<div class="help_div2_column">Area codes:<br>
 				clo - Clock Tower Roof<br>
 				sct - South Clock Town<br>
 				nct - North Clock Town<br>

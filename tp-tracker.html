@@ -128,7 +128,9 @@
 				<label class="settingsLabels" for="settings_option" style="display: none;">Mode</label>
 				<select class="settingsOptions" id="settings_option" style="display: none;">
 					<option value="Drehen">Drehen</option>
-				</select>
+				</select><br>
+				
+				<button id='helpButton' onclick="document.getElementById('help_div1').style.display = 'block';">Help</button><br>
 				
 				<small class="hint_text" id="barren_text">Barren</small><br>
 				<input spellcheck="false" id="barren_input1" class="hint_input"></input>
@@ -232,6 +234,69 @@
 			<div id="checkSummaryColumn1" class="checkSummaryColumn"></div>
 			<div id="checkSummaryColumn2" class="checkSummaryColumn"></div>
 			<div id="checkSummaryColumn3" class="checkSummaryColumn"></div>
+		</div>
+		<div id="help_div1" class="help_div1">
+			<div class="help_div2">
+				<span class="close">&times;</span>
+				<p>This tracker was inspired by <a href="https://soilflux.github.io/tracker">soli's OoT tracker</a>.<br><br>
+				-Input the code for an item/song in the picture text box next to a check. You can also left click on the text to mark it as junk.<br> 
+				-Capitalize the third letter of the code to "peek" it, or capitalize the first letter of the code to "hint" it. Peeked or hinted checks will not be counted as obtained until you click the check text.<br>
+				-You can right click an item in the summary area to mark it as obtained. You can left click an item in the summary area to mark it as hinted.<br>
+				-Input abbreviations for hint areas in the Foolish and Spirit of Light boxes to track those.<br>
+				-Press Ctrl+Z to undo the last item input.<br></p>
+				<div class="help_div2_column">Item codes:<br>
+				x - Junk<br>
+				ash - Ashei's Sketch<br>
+				aur - Auru's Memo<br>
+				bal - Ball and Chain<br>
+				boo - Boomerang<br>
+				bom - Bomb Bag<br>
+				bow - Bow<br>
+				cla - Clawshot<br>
+				iro - Iron Boots<br>
+				lan - Lantern<br>
+				dom - Dominion Rod<br>
+				fis - Fishing Rod<br>
+				ski - Hidden Skill<br>
+				sky - Sky Book Page<br>
+				swo - Sword<br>
+				wal - Wallet<br>
+				sli - Slingshot<br>
+				spi - Spinner<br>
+				zor - Zora Armor<br>
+				mag - Magic Armor<br></div>
+				<div class="help_div2_column">Area codes:<br>
+				ord - Ordon Province<br>
+				woo/fwo - Faron Woods<br>
+				faf/ffi - Faron Field<br>
+				sac/gro/sg/lw/sglw - Sacred Grove & Lost Woods<br>
+				kag/kgo - Kakariko Gorge<br>
+				kak - Kakariko Village<br>
+				gra - Kakariko Graveyard<br>
+				dm/dea/mou - Death Mountain<br>
+				eas/efi - East Hyrule Field<br>
+				nef - Northeast Hyrule Field<br>
+				wes/wfi - Outside West Castle Town<br>
+				lfi - Lanayru Field<br>
+				bri/hbr/gbh/bh - Great Bridge of Hylia<br>
+				llc/lca/lac - Lake Lantern Cave<br>
+				lak/hyl/lh - Lake Hylia<br>
+				spr/ls - Lanayru Spring<br>
+				des/ger/gd - Gerudo Desert<br>
+				zd/dom - Zoras Domain<br>
+				uzr/zr/riv - Upper Zora's River<br>
+				cas/tow/ct - Castle Town<br>
+				sfi/sct/osct/sou - Outside South Castle Town<br>
+				spp/sp - Snowpeak Province<br>
+				bc/bul/cam - Bulbin Camp<br>
+				for/ft - Forest Temple<br>
+				gor/min/gm" - Goron Mines<br>
+				lbt - Lakebed Temple<br>
+				arb/gro/ag - Arbiters Grounds<br>
+				sr/rui - Snowpeak Ruins<br>
+				tot/tim - Temple of Time<br>
+				sky/cit/cits - City in the Sky<br></div>
+			</div>
 		</div>
 		<script type="text/javascript" src="./js/tp_data.js"></script>
 		<script type="text/javascript" src="./js/tracker-main.js"></script>

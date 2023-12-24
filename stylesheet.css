@@ -374,7 +374,7 @@ overflow: hidden;
 	letter-spacing: -1px;
 }
 
-.modal {
+.help_div1 {
   display: none;
   position: fixed; 
   z-index: 1; 
@@ -387,7 +387,7 @@ overflow: hidden;
   background-color: rgba(0,0,0,0.4); 
 }
 
-.modal-content {
+.help_div2 {
   background-color: #fefefe;
   margin: 15% auto; 
   padding: 20px;
@@ -561,7 +561,7 @@ color:ff4d4d;
 	border: 1px solid red;
 	vertical-align: middle;
 }
-.modal_column {
+.help_div2_column {
 	display: inline-block;
 	margin-right: 100px;
 	vertical-align: top;

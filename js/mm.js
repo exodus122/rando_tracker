@@ -131,15 +131,15 @@ for(let i = 0; i < Data["areas"].length; i++) {
 }
 
 // Close Help
-var modal = document.getElementById("myModal");
+var help_div1 = document.getElementById("help_div1");
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
-  modal.style.display = "none";
+  help_div1.style.display = "none";
 }
 window.onclick = function(event) {
-  if (event.target == modal) {
-	modal.style.display = "none";
+  if (event.target == help_div2) {
+	help_div1.style.display = "none";
   }
 }
 

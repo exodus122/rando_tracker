@@ -140,6 +140,19 @@ for(let i = 0; i < Data["areas"].length; i++) {
 	column.appendChild(span);
 }
 
+// Close Help
+var help_div1 = document.getElementById("help_div1");
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  help_div1.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == help_div2) {
+	help_div1.style.display = "none";
+  }
+}
+
 /* FUNCTIONS */
 
 function update_required_dungeons() {
