@@ -142,6 +142,7 @@ for(let i = 0; i < Data["areas"].length; i++) {
 
 // Close Help
 var help_div1 = document.getElementById("help_div1");
+var help_div2 = document.getElementById("help_div2");
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
